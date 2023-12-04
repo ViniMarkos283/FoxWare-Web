@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chat Responsivo com Respostas Automáticas</title>
+</head>
+<body>
+	<div class="chat">
+		<div class="mensagens"></div>
+		<div class="input">
+			<input type="text" placeholder="Digite sua mensagem...">
+			<button>Enviar</button>
+		</div>
+	</div>
+
+<style>
+    * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.chat {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
+	padding: 20px;
+	background-color: #f1f1f1;
+}
+
+.mensagens {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	height: 80%;
+	width: 100%;
+	overflow-y: scroll;
+	padding: 10px;
+	background-color: #fff;
+	border-radius: 10px;
+}
+
+.mensagem {
+	display: inline-block;
+	margin: 5px;
+	padding: 10px;
+	background-color: #d3d3d3;
+	border-radius: 5px;
+	max-width: 70%;
+}
+
+.resposta {
+	display: inline-block;
+	margin: 5px;
+	padding: 10px;
+	background-color: #4caf50;
+	color: #fff;
+	border-radius: 5px;
+	align-self: flex-end;
+	max-width: 70%;
+}
+
+.input {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	margin-top: 10px;
+}
+
+.input input {
+	flex: 1;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+}
+
+.input button {
+	padding: 10px;
+	background-color: #4caf50;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+</style>
+
+<script>
+const input = document.querySelector('input');
+const button = document.querySelector('button');
+const mensagens = document.querySelector('.mensagens');
+
+button.addEventListener('click', () => {
+  if (input.value !== '') {
+    const mensagem = document.createElement('div');
+    mensagem.classList.add('mensagem');
+    mensagem.textContent = input.value;
+    mensagens.appendChild(mensagem);
+
+    // Chama a função de resposta automática
+    respostaAutomatica(input.value);
+
+    input.value = '';
+    mensagens.scrollTop = mensagens.scrollHeight;
+  }
+});
+
+input.addEventListener('keypress', (event) => {
+  if (event.key === 'Enter') {
+    button.click();
+  }
+});
+
+function respostaAutomatica(mensagem) {
+  const resposta = document.createElement('div');
+  resposta.classList.add('resposta');
+
+  // Define a mensagem de resposta de acordo com a mensagem do usuário
+  if (mensagem.toLowerCase().includes('olá') || mensagem.toLowerCase().includes('oi')) {
+    resposta.textContent = 'Olá! Tudo bem?';
+  } else if (mensagem.toLowerCase().includes('como está') || mensagem.toLowerCase().includes('tudo bem')) {
+    resposta.textContent = 'Estou bem, obrigado. E você?';
+  } else if (mensagem.toLowerCase().includes('obrigado') || mensagem.toLowerCase().includes('valeu')) {
+    resposta.textContent = 'De nada!';
+  } else {
+    resposta.textContent = 'Desculpe, não entendi. Poderia reformular a pergunta?';
+  }
+
+  mensagens.appendChild(resposta);
+  mensagens.scrollTop = mensagens.scrollHeight;
+}
+
+</script>
+
+</body>
+</html>

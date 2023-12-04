@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imgHeadFoot/Design_sem_nome__1_-removebg-preview.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="pop.css">
+    <link rel="stylesheet" href="headFootCHat.css">
+
+    <title>Desafio HTML </title>
+</head>
+<body>
+
+    <svg style="display:none;">
+        <symbol id="down" viewBox="0 0 16 16">
+          <polygon points="3.81 4.38 8 8.57 12.19 4.38 13.71 5.91 8 11.62 2.29 5.91 3.81 4.38" />
+        </symbol>
+        <symbol id="users" viewBox="0 0 16 16">
+          <path d="M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0ZM8,15a7,7,0,0,1-5.19-2.32,2.71,2.71,0,0,1,1.7-1,13.11,13.11,0,0,0,1.29-.28,2.32,2.32,0,0,0,.94-.34,1.17,1.17,0,0,0-.27-.7h0A3.61,3.61,0,0,1,5.15,7.49,3.18,3.18,0,0,1,8,4.07a3.18,3.18,0,0,1,2.86,3.42,3.6,3.6,0,0,1-1.32,2.88h0a1.13,1.13,0,0,0-.27.69,2.68,2.68,0,0,0,.93.31,10.81,10.81,0,0,0,1.28.23,2.63,2.63,0,0,1,1.78,1A7,7,0,0,1,8,15Z" />
+        </symbol>
+        <symbol id="collection" viewBox="0 0 16 16">
+          <rect width="7" height="7" />
+          <rect y="9" width="7" height="7" />
+          <rect x="9" width="7" height="7" />
+          <rect x="9" y="9" width="7" height="7" />
+        </symbol>
+        <symbol id="charts" viewBox="0 0 16 16">
+          <polygon points="0.64 7.38 -0.02 6.63 2.55 4.38 4.57 5.93 9.25 0.78 12.97 4.37 15.37 2.31 16.02 3.07 12.94 5.72 9.29 2.21 4.69 7.29 2.59 5.67 0.64 7.38" />
+          <rect y="9" width="2" height="7" />
+          <rect x="12" y="8" width="2" height="8" />
+          <rect x="8" y="6" width="2" height="10" />
+          <rect x="4" y="11" width="2" height="5" />
+        </symbol>
+        <symbol id="comments" viewBox="0 0 16 16">
+          <path d="M0,16.13V2H15V13H5.24ZM1,3V14.37L5,12h9V3Z" />
+          <rect x="3" y="5" width="9" height="1" />
+          <rect x="3" y="7" width="7" height="1" />
+          <rect x="3" y="9" width="5" height="1" />
+        </symbol>
+        <symbol id="pages" viewBox="0 0 16 16">
+          <rect x="4" width="12" height="12" transform="translate(20 12) rotate(-180)" />
+          <polygon points="2 14 2 2 0 2 0 14 0 16 2 16 14 16 14 14 2 14" />
+        </symbol>
+        <symbol id="appearance" viewBox="0 0 16 16">
+          <path d="M3,0V7A2,2,0,0,0,5,9H6v5a2,2,0,0,0,4,0V9h1a2,2,0,0,0,2-2V0Zm9,7a1,1,0,0,1-1,1H9v6a1,1,0,0,1-2,0V8H5A1,1,0,0,1,4,7V6h8ZM4,5V1H6V4H7V1H9V4h1V1h2V5Z" />
+        </symbol>
+        <symbol id="trends" viewBox="0 0 16 16">
+          <polygon points="0.64 11.85 -0.02 11.1 2.55 8.85 4.57 10.4 9.25 5.25 12.97 8.84 15.37 6.79 16.02 7.54 12.94 10.2 9.29 6.68 4.69 11.76 2.59 10.14 0.64 11.85" />
+        </symbol>
+        <symbol id="settings" viewBox="0 0 16 16">
+          <rect x="9.78" y="5.34" width="1" height="7.97" />
+          <polygon points="7.79 6.07 10.28 1.75 12.77 6.07 7.79 6.07" />
+          <rect x="4.16" y="1.75" width="1" height="7.97" />
+          <polygon points="7.15 8.99 4.66 13.31 2.16 8.99 7.15 8.99" />
+          <rect x="1.28" width="1" height="4.97" />
+          <polygon points="3.28 4.53 1.78 7.13 0.28 4.53 3.28 4.53" />
+          <rect x="12.84" y="11.03" width="1" height="4.97" />
+          <polygon points="11.85 11.47 13.34 8.88 14.84 11.47 11.85 11.47" />
+        </symbol>
+        <symbol id="options" viewBox="0 0 16 16">
+          <path d="M8,11a3,3,0,1,1,3-3A3,3,0,0,1,8,11ZM8,6a2,2,0,1,0,2,2A2,2,0,0,0,8,6Z" />
+          <path d="M8.5,16h-1A1.5,1.5,0,0,1,6,14.5v-.85a5.91,5.91,0,0,1-.58-.24l-.6.6A1.54,1.54,0,0,1,2.7,14L2,13.3a1.5,1.5,0,0,1,0-2.12l.6-.6A5.91,5.91,0,0,1,2.35,10H1.5A1.5,1.5,0,0,1,0,8.5v-1A1.5,1.5,0,0,1,1.5,6h.85a5.91,5.91,0,0,1,.24-.58L2,4.82A1.5,1.5,0,0,1,2,2.7L2.7,2A1.54,1.54,0,0,1,4.82,2l.6.6A5.91,5.91,0,0,1,6,2.35V1.5A1.5,1.5,0,0,1,7.5,0h1A1.5,1.5,0,0,1,10,1.5v.85a5.91,5.91,0,0,1,.58.24l.6-.6A1.54,1.54,0,0,1,13.3,2L14,2.7a1.5,1.5,0,0,1,0,2.12l-.6.6a5.91,5.91,0,0,1,.24.58h.85A1.5,1.5,0,0,1,16,7.5v1A1.5,1.5,0,0,1,14.5,10h-.85a5.91,5.91,0,0,1-.24.58l.6.6a1.5,1.5,0,0,1,0,2.12L13.3,14a1.54,1.54,0,0,1-2.12,0l-.6-.6a5.91,5.91,0,0,1-.58.24v.85A1.5,1.5,0,0,1,8.5,16ZM5.23,12.18l.33.18a4.94,4.94,0,0,0,1.07.44l.36.1V14.5a.5.5,0,0,0,.5.5h1a.5.5,0,0,0,.5-.5V12.91l.36-.1a4.94,4.94,0,0,0,1.07-.44l.33-.18,1.12,1.12a.51.51,0,0,0,.71,0l.71-.71a.5.5,0,0,0,0-.71l-1.12-1.12.18-.33a4.94,4.94,0,0,0,.44-1.07l.1-.36H14.5a.5.5,0,0,0,.5-.5v-1a.5.5,0,0,0-.5-.5H12.91l-.1-.36a4.94,4.94,0,0,0-.44-1.07l-.18-.33L13.3,4.11a.5.5,0,0,0,0-.71L12.6,2.7a.51.51,0,0,0-.71,0L10.77,3.82l-.33-.18a4.94,4.94,0,0,0-1.07-.44L9,3.09V1.5A.5.5,0,0,0,8.5,1h-1a.5.5,0,0,0-.5.5V3.09l-.36.1a4.94,4.94,0,0,0-1.07.44l-.33.18L4.11,2.7a.51.51,0,0,0-.71,0L2.7,3.4a.5.5,0,0,0,0,.71L3.82,5.23l-.18.33a4.94,4.94,0,0,0-.44,1.07L3.09,7H1.5a.5.5,0,0,0-.5.5v1a.5.5,0,0,0,.5.5H3.09l.1.36a4.94,4.94,0,0,0,.44,1.07l.18.33L2.7,11.89a.5.5,0,0,0,0,.71l.71.71a.51.51,0,0,0,.71,0Z" />
+        </symbol>
+        <symbol id="collapse" viewBox="0 0 16 16">
+          <polygon points="11.62 3.81 7.43 8 11.62 12.19 10.09 13.71 4.38 8 10.09 2.29 11.62 3.81" />
+        </symbol>
+        <symbol id="search" viewBox="0 0 16 16">
+          <path d="M6.57,1A5.57,5.57,0,1,1,1,6.57,5.57,5.57,0,0,1,6.57,1m0-1a6.57,6.57,0,1,0,6.57,6.57A6.57,6.57,0,0,0,6.57,0Z" />
+          <rect x="11.84" y="9.87" width="2" height="5.93" transform="translate(-5.32 12.84) rotate(-45)" />
+        </symbol>
+      </svg>
+      <header class="page-header">
+        <nav>
+          
+          <button class="toggle-mob-menu" aria-expanded="false" aria-label="open menu">
+            <svg width="20" height="20" aria-hidden="true">
+              <use xlink:href="#down"></use>
+            </svg>
+          </button>
+          <ul class="admin-menu">
+            <li>
+              <a href="PágAlunPrinc.html">
+                <img style="width: 30px; height: 30px;" src="imgLu/botao-home.png" alt="">
+                <span>Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="PágAulasHT.html">
+                <img style="width: 30px; height: 30px;" src="imgLu/sala-de-aula.png" alt="">
+                <span>Aulas</span>
+              </a>
+            </li>
+            <li>
+              <a href="Perfil.html">
+                <img style="width: 30px; height: 30px;" src="imgLu/perfil.png" alt="">
+                <span>Usuário</span>
+              </a>
+            </li>
+            <li>
+              <a href="TesteCalen.html">
+                <img style="width: 30px; height: 30px;" src="imgLu/calendario.png" alt="">
+                <span>Calendário</span>
+              </a>
+            </li>
+            <li>
+              <a href="Atividades.html">
+                <img style="width: 30px; height: 30px;" src="imgLu/lista-de-tarefas.png" alt="">
+                <span>Atividades</span>
+              </a>
+            </li>
+            <li>
+              <a href="chat.html">
+                <img style="width: 30px; height: 30px;" src="imgLu/web-chat.png" alt="">
+                <span>Chat</span>
+              </a>
+            </li>
+            <li>
+              <div class="switch">
+                <input type="checkbox" id="mode" checked>
+                <label for="mode">
+                  <span></span>
+                  <span>Escuro</span>
+                </label>
+              </div>
+              <button class="collapse-btn" aria-expanded="true" aria-label="collapse menu">
+                <svg aria-hidden="true">
+                  <use xlink:href="#collapse"></use>
+                </svg>
+                <span>Fechar Menu</span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+<!--Conteúdo da pagina-->
+
+      <section class="page-content">
+    <body>
+        <div class="container">
+          <header class="cabecalho">
+            <div class="perfil">
+              <div class="titulo">
+                <h1>Super Desafio HTML</h1>
+                <hr class="linha">
+                <br>
+                <h2> Proposta comercial para criação de site Apresentamos a vocês um pouco de nossa história: Empresa criada em 2007 no interior do Paraná idealizada por jovens que queriam fazer a diferença no mercado regional levando tecnologia as pequenas empresas. A Empresa mudou-se do interior para a capital onde expandiu seus negócios e ganhou espaço nas áreas públicas e privadas. Hoje além de soluções para internet a empresa Vale Soluções em Gestão atua com treinamentos e capacitações In Company para empresas e Prefeituras e Câmaras Municipais. Desde 2007 a empresa já atendeu mais de 100 clientes nas áreas Públicas e Privadas Estando presente nos estados do Paraná, Rio Grande do Sul, Santa Catarina, Bahia, Distrito Federal e Tocantins. Nossa empresa possui uma equipe formada por profissionais com mais de 10 anos de experiência no Desenvolvimento de Sites, Marketing Online, Soluções para internet, Capacitações e Treinamentos com capacidade técnica e criativa para atender sua empresa ou oferecendo desde a criação da sua logo até a criação e otimização de seu site e sistemas próprios.</h2>
+                <br>
+                  <h1> 01 - O PROJETO  A presente proposta tem como objetivos: </h1>
+                 <h2> • Registro do domínio junto ao Comitê Gestor de Internet; 
+                  <h2> Criação do web site institucional da empresa padrões e normas atualmente vigentes e utilizando as mais nomeadas tecnologias, adaptado e compatível para dispositivos móveis. 
+                    Criação e configuração de contas de e-mails. </h2>
+                  <h2> • Configuração das Meta Tags e Indexadores do Google. </h2>
+                  <h2> • Hospedagem, Manutenção e Suporte do Site.  </h2>
+                  <h2> • Locação de Sistemas Gerenciador de Eventos</h2>
+                  <br>
+                  <h1> Estrutura do Web Site  </h1>
+                  <h2>  • Home: Página Principal com destaque a principais produtos e a demais páginas do site.  </h2>
+                  <h2>  • Quem Somos: Página que contará a história da empresa com fotos e textos.  </h2>
+                  <h2>  • Cursos Realizados: Página para a inserção dos cursos realizados, fotos.  </h2>
+                  <h2>  • Agenda: Agenda de cursos . • Fale Conosco: Formulário de contato e localização da empresa.  </h2>
+                  <h2>  • Integração com Redes Sociais: módulos integrado as páginas do site. </h2>
+                  <h2>  • Inscrições: Sistema Vale Soluções para o Gerenciamento de Inscrições.  </h2>
+                 <h2> O layout do Site será Personalizado de acordo com as necessidades e Identidade Visual da empresa, bem como modificações em páginas e conteúdos. </h2>
+                 <br>
+                 <h1> 02 - Hospedagem do Portal com as seguintes especificações: </h1>
+                 <h2> Hospedagem do site com direito a 10 contas de e-mails. Espaço em disco 5GB, Tráfego Ilimitado servidor de Alta Capacidade e Segurança no Armazenamento dos Dados; </h2>
+                 <h2> • Manutenção e suporte das caixas postais de email; Configuração de emails; </h2>
+                 <h2> • Hospedagem do Servidor de emails; </h2>
+                 <h2> • Redirecionamentos de Emails; </h2>
+                 <h2> • Resposta Automática, BoxTraper;  </h2>
+                 <h2> • AntiSpam e Antivírus, Filtros de Emails, Autenticação de emails;  </h2>
+                  <br>
+                  <h1>03 – Manutenção e Suporte: Nosso serviço de manutenção e Suporte conta com as seguintes atividades: </h1>
+                  <h2> • Atualizações necessárias no site de acordo com as solicitações do Cliente;  </h2>
+                  <h2> • Suporte diário caso aconteça algum problema ou dúvidas relacionado ao site, e-mails, configurações. </h2>
+                  <h2> • Seu pedido sempre será feito direto a um de nossos atendentes por telefone ou e-mail.  </h2>
+                  <h2> • Cuidamos de seu Domínio para você, caso se esqueça do pagamento anual, estaremos atentos aos vencimentos.  </h2>
+                  <h2> • Suporte necessário para criação de materiais gráficos tais como panfletos, cartões de visitas. </h2>
+                <br>
+
+                <label> Escolha um Arquivo: </label>
+                   <input type="file" id="myFile" /> <br /><br />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </header>
+        </div>
+
+        
+
+      
+                  
+      </body>
+
+      <style>
+
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700&display=swap");
+
+:root {
+  --page-header-bgColor: #242e42;
+  --page-header-bgColor-hover: #1d2636;
+  --page-header-txtColor: #dde9f8;
+  --page-header-headingColor: #7889a4;
+  --page-header-width: 220px;
+  --page-content-bgColor: #f0f1f6;
+  --page-content-txtColor: #171616;
+  --page-content-blockColor: #fff;
+  --white: #fff;
+  --black: #333;
+  --blue: #00b9eb;
+  --red: #ec1848;
+  --border-radius: 4px;
+  --box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.075);
+  --switch-bgLightModeColor: #87cefa;
+  --switch-sunColor: gold;
+  --switch-moonColor: #f4f4f4;
+  --switch-bgDarkModeColor: #1f1f27;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a,
+button {
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  cursor: pointer;
+}
+
+input {
+  -webkit-appearance: unset;
+}
+
+[type="checkbox"] {
+  position: absolute;
+  left: -9999px;
+}
+
+label {
+  cursor: pointer;
+}
+
+button,
+input {
+  border: none;
+}
+
+svg {
+  display: block;
+}
+
+body {
+  font: 16px/1.5 "Lato", sans-serif;
+}
+
+
+/* HEADER STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  padding-top: 0px;
+  width: var(--page-header-width);
+  color: var(--page-header-txtColor);
+  background: var(--page-header-bgColor);
+}
+
+/*In case you prefer an absolutely positioned header that covers the full page height, add these styles*/
+/*body {
+  position: relative;
+}
+
+.page-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}*/
+
+/*remove these styles*/
+/*.page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+}*/
+
+.page-header nav {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.page-header .logo {
+  display: block;
+  margin: 0 15px;
+}
+
+.page-header .logo svg {
+  max-width: 120px;
+  fill: var(--white);
+}
+
+.page-header .toggle-mob-menu {
+  display: none;
+  margin-left: 5px;
+  padding: 4px;
+  background: var(--page-content-blockColor);
+  border-radius: var(--border-radius);
+}
+
+.page-header .toggle-mob-menu svg {
+  fill: var(--black);
+  transition: transform 0.2s;
+}
+
+.page-header .admin-menu {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-top: 35px;
+}
+
+.page-header .admin-menu li:nth-last-child(2) {
+  margin-bottom: 35px;
+}
+
+.page-header .admin-menu li:last-child {
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
+.page-header .admin-menu li > * {
+  width: 100%;
+  padding: 10px 10px;
+}
+
+.page-header .admin-menu .switcher {
+  display: inline-block;
+  width: auto;
+}
+
+.page-header .admin-menu .menu-heading h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 12px;
+  margin-top: 12px;
+  color: var(--page-header-headingColor);
+}
+
+.page-header .admin-menu svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--page-header-txtColor);
+  margin-right: 10px;
+}
+
+.page-header .admin-menu a,
+.page-header .admin-menu button {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.page-header .admin-menu a:hover,
+.page-header .admin-menu a:focus,
+.page-header .admin-menu button:hover,
+.page-header .admin-menu button:focus {
+  background: var(--page-header-bgColor-hover);
+  color: var(--blue);
+  outline: none;
+}
+
+.page-header .admin-menu a:hover svg,
+.page-header .admin-menu a:focus svg,
+.page-header .admin-menu button:hover svg,
+.page-header .admin-menu button:focus svg {
+  fill: var(--blue);
+}
+
+
+/* PAGE CONTENT STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.page-content {
+  position: relative;
+  left: var(--page-header-width);
+  width: calc(100% - var(--page-header-width));
+  min-height: 100vh;
+  padding: 30px;
+  color: var(--page-content-txtColor);
+  background: var(--page-content-bgColor);
+}
+
+.search-and-user {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-column-gap: 50px;
+  align-items: center;
+  background: var(--page-content-bgColor);
+  margin-bottom: 30px;
+}
+
+.search-and-user form {
+  position: relative;
+}
+
+.search-and-user [type="search"] {
+  width: 100%;
+  height: 50px;
+  font-size: 1.5rem;
+  padding-left: 15px;
+  background: var(--page-content-blockColor);
+  color: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.search-and-user ::placeholder {
+  color: var(--page-content-txtColor);
+}
+
+.search-and-user form svg {
+  width: 26px;
+  height: 26px;
+  fill: var(--page-content-txtColor);
+}
+
+.search-and-user form button {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+}
+
+.search-and-user .admin-profile {
+  display: flex;
+  align-items: center;
+}
+
+.search-and-user .admin-profile .greeting {
+  margin: 0 10px 0 20px;
+}
+
+.search-and-user .admin-profile svg {
+  width: 30px;
+  height: 30px;
+}
+
+.search-and-user .admin-profile .notifications {
+  position: relative;
+}
+
+.search-and-user .admin-profile .badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -10px;
+  right: -3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  font-size: 10px;
+  color: var(--white);
+  background: var(--red);
+}
+
+.page-content .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+}
+
+.page-content .grid > article {
+  display: flex;
+  height: 300px;
+  background: var(--page-content-blockColor);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.page-content .grid > article:first-child,
+.page-content .grid > article:last-child {
+  grid-column: 1 / -1;
+}
+
+
+/* MQ RULES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (max-width: 767px) {
+  .page-header,
+  .page-content {
+    position: static;
+    width: 100%;
+  }
+
+  .page-header {
+    padding: 10px;
+  }
+
+  .page-header nav {
+    flex-direction: row;
+  }
+
+  .page-header .logo {
+    margin: 0;
+  }
+
+  .page-header .logo svg {
+    width: 83px;
+    height: 35px;
+  }
+
+  .page-header .toggle-mob-menu {
+    display: block;
+  }
+
+  .page-header .admin-menu {
+    position: absolute;
+    left: 98px;
+    top: 57px;
+    margin-top: 0;
+    z-index: 2;
+    border-radius: var(--border-radius);
+    background: var(--page-header-bgColor);
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: all 0.2s;
+  }
+
+  .page-header .admin-menu li:nth-last-child(2) {
+    margin-bottom: 12px;
+  }
+
+  .page-header .admin-menu li:last-child button,
+  .search-and-user .admin-profile .greeting {
+    display: none;
+  }
+
+  .page-content {
+    min-height: 0;
+    padding: 10px;
+  }
+
+  .page-content .grid {
+    grid-gap: 10px;
+  }
+
+  .search-and-user {
+    position: absolute;
+    left: 131px;
+    top: 10px;
+    padding: 0;
+    grid-column-gap: 5px;
+    width: calc(100% - 141px);
+    border-radius: var(--border-radius);
+    background: transparent;
+  }
+
+  .search-and-user [type="search"] {
+    font-size: 1rem;
+    height: 35px;
+  }
+
+  .search-and-user form svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .search-and-user .admin-profile svg {
+    fill: var(--white);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .page-content .grid > article {
+    grid-column: 1 / -1;
+  }
+}
+
+
+/* BODY CLASSES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.mob-menu-opened .toggle-mob-menu svg {
+  transform: rotate(180deg);
+}
+
+.mob-menu-opened .page-header .admin-menu {
+  transform: scale(1);
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .collapsed .page-header {
+    width: 40px;
+  }
+
+  .collapsed .page-header .admin-menu li > * {
+    padding: 10px;
+  }
+
+  .collapsed .page-header .logo,
+  .collapsed .page-header .admin-menu span,
+  .collapsed .page-header .admin-menu .menu-heading {
+    display: none;
+  }
+
+  .collapsed .page-header .admin-menu svg {
+    margin-right: 0;
+  }
+
+  .collapsed .page-header .collapse-btn svg {
+    transform: rotate(180deg);
+  }
+
+  .collapsed .page-content {
+    left: 40px;
+    width: calc(100% - 40px);
+  }
+}
+
+
+/* SWITCH STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.switch label {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.switch span:first-child {
+  position: relative;
+  width: 50px;
+  height: 26px;
+  border-radius: 15px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.4);
+  background: var(--switch-bgLightModeColor);
+  transition: all 0.3s;
+}
+
+.switch span:first-child::before,
+.switch span:first-child::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+
+.switch span:first-child::before {
+  top: 1px;
+  left: 1px;
+  width: 24px;
+  height: 24px;
+  background: var(--white);
+  z-index: 1;
+  transition: transform 0.3s;
+}
+
+.switch span:first-child::after {
+  top: 50%;
+  right: 8px;
+  width: 10px;
+  height: 10px;
+  transform: translateY(-50%);
+  background: var(--switch-sunColor);
+  box-shadow: 0 0 4px 2px #ffdb1a;
+}
+
+.switch [type="checkbox"]:checked + label span:first-child {
+  background: var(--switch-bgDarkModeColor);
+}
+
+.switch [type="checkbox"]:focus + label span:first-child {
+  box-shadow: 0 3px 5px rgba(255, 255, 255, 0.25);
+}
+
+.switch [type="checkbox"]:checked + label span:first-child::before {
+  transform: translateX(24px);
+}
+
+.switch [type="checkbox"]:checked + label span:first-child::after {
+  left: 12px;
+  width: 15px;
+  height: 15px;
+  background: transparent;
+  box-shadow: -2px -5px 0 var(--switch-moonColor);
+  transform: translateY(-50%) rotate(-72deg);
+}
+
+
+/* LIGHT MODE STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.light-mode {
+  --page-header-bgColor: #f1efec;
+  --page-header-bgColor-hover: #b9e4e0;
+  --page-header-txtColor: #2c303a;
+  --page-header-headingColor: #979595;
+  --page-content-bgColor: #fff;
+  --box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.25);
+}
+
+.light-mode .page-header .admin-menu a:hover,
+.light-mode .page-header .admin-menu a:focus,
+.light-mode .page-header .admin-menu button:hover,
+.light-mode .page-header .admin-menu button:focus {
+  color: var(--black);
+}
+
+.light-mode .page-header .logo svg,
+.light-mode .page-header .admin-menu a:hover svg,
+.light-mode .page-header .admin-menu a:focus svg,
+.light-mode .page-header .admin-menu button:hover svg,
+.light-mode .page-header .admin-menu button:focus svg {
+  fill: var(--black);
+}
+
+.light-mode .switch [type="checkbox"]:focus + label span:first-child {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (max-width: 767px) {
+  .light-mode .search-and-user .admin-profile svg {
+    fill: var(--black);
+  }
+}
+
+
+/* FOOTER
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.page-footer {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.page-footer a {
+  margin-left: 4px;
+}
+
+/*PERFIL*/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap");
+
+.container {
+  min-width: 300px;
+  max-width: 2000px; 
+  margin-top: 80px;
+  background: #F6F6F6;
+  height: 2200px;
+  width: 1300px;
+  margin: auto;
+  box-shadow: 6px 6px 6px #4b4b4bc2;
+  border-radius: 20px;
+  color: #1c1c1c;
+  padding: 38px;
+  border: 0px solid #000000;   
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+}
+
+.perfil {
+  display: flex;  
+}
+
+.perfil-foto {
+  border-radius: 10px;
+  max-height: 150px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) ;
+  border: 2px solid lightgrey;
+  align-items: center;
+}
+
+.titulo {
+  margin-left: 16px;
+}
+
+.titulo h1 {
+  font-weight: 700;
+  font-size: 38px;
+}
+
+.titulo h2 {
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.tema button {
+  align self; flex-end;
+  font-size: 16px;
+  font-weight: 400px;
+  padding: 8px 16px;
+  background: #ECF4FF;
+  border-radius: 100px;
+  font-family: "Roboto", serif;
+  background: #2a263b;
+  color: #FFFFFF;
+  border: 2px solid #F7F7F7;
+  opacity: 0.4;
+}
+
+.projetos {
+  display: flex;
+  flex-direction: column;
+  text-align: auto;
+  margin: 10px auto 30px;
+  font-family: "Roboto", serif;
+  font-size: 20px;
+  align-items: center;
+  
+}
+
+.projeto-titulo {
+  list-style: none;
+  font-weight: 700px;
+  font-size: 18px;
+  margin-bottom: 40px;
+  font-family: Roboto; 
+}
+
+.projetos-item {
+  list-style-type: none;
+  font-weight: 400px;
+  font-size: 15px;
+  line-height: 50px;
+}
+
+.projetos-item a {
+  color: black;
+  text-decoration: none;
+  margin: 0px;
+}
+
+.projetos-item img {
+   margin: 0px 0px 0px;   
+   border: 1px solid #744d71;
+   border-radius: 4px;
+   padding: 8px;
+   border-bottom: 10px solid  #2a263b;
+   background-color: lightgrey;
+   width: 210px;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   text-align: center;   
+   align: center;
+}
+
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+.projetos-item p { 
+  margin: 2px 1em 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  padding: 5px;
+  border-radius: 10px; 
+  margin-left: 20px;
+  margin-top: 0px;
+}
+.coluna {
+  float: left;
+  width: 33.33%;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+  align: center;
+}
+
+/*Cards*/
+.cards-list {
+  z-index: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 30px auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 40px;
+box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.card .card_image {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+}
+
+.card .card_image img {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+.card .card_title {
+  text-align: center;
+  border-radius: 0px 0px 40px 40px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: -80px;
+  height: 40px;
+}
+
+.card:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+    -5px -5px 30px 15px rgba(0,0,0,0.22);
+}
+
+.title-white {
+  color: white;
+}
+
+.title-black {
+  color: black;
+}
+
+@media all and (max-width: 500px) {
+  .card-list {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
+}
+
+
+/*
+.card {
+  margin: 30px auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 40px;
+  background-image: url('https://i.redd.it/b3esnz5ra34y.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
+box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+  transition: 0.4s;
+}
+*/
+  
+
+
+
+
+
+
+</style>
+
+<script>
+  var ButtonLines = function(target, qtd, elementLine){
+  var target = document.querySelector(target),
+      url    = target.dataset.url || "#",
+      lines;
+
+  function addItens(){
+    for(var i = 0; i < qtd; i++){
+      target.appendChild(document.createElement(elementLine));
+    }
+    lines = Array.prototype.slice.call(document.querySelectorAll(elementLine));
+    lines.shift();
+    lines.forEach(function(e){
+      if(e.classList.length === 0){
+         e.classList.add("line");        
+      }
+    });
+  }
+
+  function removeItens(){
+    if(lines){
+     lines.forEach(function(e){
+      target.removeChild(e);
+     });
+      lines = null;
+    }
+    // lines.forEach(function(e){
+    //   if(e.classList.length === 0){
+    //     target.removeChild(e);
+    //   }
+    //   console.log(document.querySelector(".line"));
+    // });
+    // console.log(lines);
+    // lines.forEach(function(e){
+    //   target.removeChild(e);
+    // });
+    // var elementsLine = target.querySelectorAll(elementLine);
+    // if(elementsLine.length > 1 && elementsLine.length != 0){
+    //   for(var i = 0; i < elementsLine.length; i++){
+    //     target.removeChild(elementsLine[i]);
+    //   }
+    // } else {
+    //   if(elementsLine.length != 0){
+    //     target.removeChild(elementsLine)
+    //   }
+    // }
+  }
+
+  target.addEventListener("mousedown", function(){
+    removeItens();
+    addItens();
+    this.classList.add("bouncing");
+    this.classList.add("lines");
+  });
+  
+  target.addEventListener("mouseup", function(){
+    this.addEventListener("animationend", function(){
+       this.classList.remove("bouncing");
+    });
+    this.querySelector(elementLine+":last-child").addEventListener("animationend", function(e){
+      target.classList.remove("lines");
+      removeItens();
+    });
+  })
+};
+new ButtonLines(".btn-efect", 9, "div");
+</script>
+
+<script src="HeadLater.js"></script>
+<script src="pop.js"></script>
+
+</body>
+</html>
