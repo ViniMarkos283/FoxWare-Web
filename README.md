@@ -4,4 +4,4 @@
  e conferir a versão modificada pela branch main
 
  OBS: está incompleto, estarei arrumando ao decorrer do tempo, ent haverá partes do site que não estarão funcionando direito
-para acessar o site, use esse link:
+para acessar o site, use esse link: https://vinimarkos283.github.io/TCC-FoxWare_remake/
