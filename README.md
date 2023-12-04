@@ -8,3 +8,4 @@ a branch "main" contará com adiçoes minhas usando conhecimentos aprendidos na 
 OBS: está incompleto, estarei arrumando ao decorrer do tempo, ent haverá partes do site que não estarão funcionando direito;
  
 para acessar o site, use esse link: https://vinimarkos283.github.io/TCC-FoxWare_remake/
+o link apresenta apenas o site na versão original, posteriormente colocarei a nova versão no ar. 
