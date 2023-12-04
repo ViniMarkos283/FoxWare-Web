@@ -1,9 +1,10 @@
 # TCC-FoxWare_remake
-projeto do TCC feito em conjunto para conclusão do curso técnico no SENAI
+projeto do TCC feito em conjunto para conclusão do curso técnico no SENAI;
  
-voce pode conferir a versão original entregue no TCC usando a branch "versao_original"
-e conferir a versão modificada pela branch "main"
+voce pode conferir a versão original entregue no TCC usando a branch "versao_original";
 
-OBS: está incompleto, estarei arrumando ao decorrer do tempo, ent haverá partes do site que não estarão funcionando direito
+a branch "main" contará com adiçoes minhas usando conhecimentos aprendidos na faculdade atualmente;
+
+OBS: está incompleto, estarei arrumando ao decorrer do tempo, ent haverá partes do site que não estarão funcionando direito;
  
 para acessar o site, use esse link: https://vinimarkos283.github.io/TCC-FoxWare_remake/
