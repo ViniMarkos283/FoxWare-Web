@@ -1,2 +1,6 @@
 # TCC-FoxWare_remake
  projeto do TCC feito em conjunto para conclusão do curso técnico no SENAI
+
+
+ OBS: está incompleto, estarei arrumando ao decorrer do tempo, ent haverá partes do site que não estarão funcionando direito
+para acessar o site, use esse link:
