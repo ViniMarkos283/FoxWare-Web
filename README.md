@@ -19,3 +19,5 @@ Está incompleto, estarei arrumando ao decorrer do tempo, ent haverá partes do 
 # Acesso:
 para acessar o site, use esse link: https://vinimarkos283.github.io/TCC-FoxWare_remake/
 o link apresenta apenas o site na versão original, quando a remake estiver mais proxima de ficar pronta, colocarei ela no ar.
+
+Esse repostorio trabalha junto ao repositório privado "FoxWare-App", servindo como complemento da aplicação.
