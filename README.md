@@ -1,5 +1,5 @@
-# TCC-FoxWare_remake
-projeto do TCC feito em conjunto para conclusão do curso técnico no SENAI;
+# TCC: FoxWare (web version)
+projeto do TCC feito em grupo para conclusão do curso técnico no SENAI;
 
 # Integrantes do Projeto:
 - Agatha
